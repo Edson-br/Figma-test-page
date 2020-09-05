@@ -1,6 +1,15 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
+    font-family: montserrat;
   }
   .doc{
     position: fixed;
@@ -22,7 +31,6 @@ body{
     width: 200px;
     display: block;
     margin:  auto;
-    opacity: 0.7;
   }
   
   .sidebar ul{
@@ -95,3 +103,26 @@ body{
   .show{
     left: 0;
   }
+
+/*Comeco da "up bar"*/
+  .nav{
+    background: rgba(255, 135, 0, 0.2);
+    height: 100px;
+    width: 100%;
+  }
+  label.logo{
+    font-family: "Times New Roman", Times, serif;
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+    color: gray;
+  }
+  .nav img{
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
