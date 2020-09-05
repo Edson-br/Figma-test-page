@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+  .doc{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+  }
+
+/*Comeco da parte do codigo da sidebar*/
+  .sidebar{
+    width: 200px;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+    float: left;
+    box-shadow: 2px 5px 3px 2px rgb(129, 129, 129);
+  }
+  .sidebar img{
+    width: 200px;
+    display: block;
+    margin:  auto;
+    opacity: 0.7;
+  }
+  
+  .sidebar ul{
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar li{
+    list-style: none;
+    padding: 10px;
+  }
+  .sidebar hr{
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px inset rgb(184, 184, 184);
+  }
+  .sidebar li:hover{
+    background: rgba(255, 135, 0, 0.2);
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    margin: auto;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      rgba(255, 135, 0, 0.2), 
+      orange
+    ) 2 50%;
+    border-left-width: 5px;
+    border-left-style: solid;
+  }
+  .sidebar a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    font-size: 17px;
+    font-family: sans-serif;
+  }
+  /*Fim da parte do codigo da sidebar*/
+  
+  .content{
+    padding: 30px;
+    font-size: 16px;
+    color: black;
+    font-family: sans-serif;
+  }
+  .content h2{
+    font-size: 30px;
+      text-transform: uppercase;
+      margin-left: 300px;
+  }
+  .content p{
+    font-size: 18px;
+    text-align: justify;
+    margin-left: 200px;
+  }
+  .content span{
+    background: black;
+    color: white;
+    padding: 10px 0px;
+    display: block;
+    float: left;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    margin-left: 100px;
+  }
+  .show{
+    left: 0;
+  }
