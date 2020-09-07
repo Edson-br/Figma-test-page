@@ -1,6 +1,15 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
+    font-family: montserrat;
   }
   .doc{
     position: fixed;
@@ -22,7 +31,6 @@ body{
     width: 200px;
     display: block;
     margin:  auto;
-    opacity: 0.7;
   }
   
   .sidebar ul{
@@ -64,6 +72,76 @@ body{
     font-family: sans-serif;
   }
   /*Fim da parte do codigo da sidebar*/
+
+  /*Comeco da "up bar"*/
+  .upbar{
+    background: rgba(255, 135, 0, 0.2);
+    height: 100px;
+    width: 100%;
+  }
+  label.titulo{
+    font-family: "Times New Roman", Times, serif;
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+    color: gray;
+  }
+  label.welcome{
+    font-family: "Times New Roman", Times, serif;
+    float: right;
+    text-align: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: gray;
+  }
+  label.notficacoes{
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 83, 31);
+    border-radius: 50%;
+    font-family: "Times New Roman", Times, serif;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    right: 20px;
+    font-size: 11px;
+    color: white;
+  }
+  .upbar img{
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    width: 50px;
+    border-radius: 50%;
+  }
+/*Botao mudanca de idiomas*/
+
+
+  .btn{
+    float: right;
+    width: 105px;
+    margin-right: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    overflow: hidden;
+    display: block;
+    padding: 10px 10px;
+    background: rgba(255, 135, 0, 0.2), ;
+    color: gray;
+    position: relative;
+  }
+  
+  .btn i{
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  /*Final da "up bar"*/
+
+  /*Comeco do conteudo*/
   
   .content{
     padding: 30px;
