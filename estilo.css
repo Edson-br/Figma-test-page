@@ -17,6 +17,16 @@ body{
     height: 100%;
     left: 0px;
   }
+  .btn{
+    border-radius: 5px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  .btn i{
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 
 /*Comeco da parte do codigo da sidebar*/
   .sidebar{
@@ -80,15 +90,15 @@ body{
     width: 100%;
   }
   label.titulo{
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     float: left;
     margin-top: 10px;
     margin-left: 40px;
-    font-size: 20px;
+    font-size: 17px;
     color: gray;
   }
   label.welcome{
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     float: right;
     text-align: right;
     margin-top: 25px;
@@ -101,7 +111,7 @@ body{
     height: 15px;
     background: rgba(255, 83, 31);
     border-radius: 50%;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     position: absolute;
     text-align: center;
     top: 25px;
@@ -117,26 +127,15 @@ body{
     border-radius: 50%;
   }
 /*Botao mudanca de idiomas*/
-
-
-  .btn{
+  .btn-upbar{
+    padding: 10px 10px;
     float: right;
     width: 105px;
     margin-right: 20px;
     margin-top: 30px;
-    border-radius: 5px;
     border: 1px solid gray;
-    overflow: hidden;
-    display: block;
-    padding: 10px 10px;
     background: rgba(255, 135, 0, 0.2), ;
     color: gray;
-    position: relative;
-  }
-  
-  .btn i{
-    margin-right: 5px;
-    margin-left: 5px;
   }
   
   /*Final da "up bar"*/
@@ -147,29 +146,48 @@ body{
     padding: 30px;
     font-size: 16px;
     color: black;
-    font-family: sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
-  .content h2{
-    font-size: 30px;
-      text-transform: uppercase;
-      margin-left: 300px;
+  .content h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 200px;
+    margin-right: 300px;
+    color: orange;
   }
   .content p{
     font-size: 18px;
     text-align: justify;
     margin-left: 200px;
   }
+  .right{
+    float: right;
+  }
   .content span{
-    background: black;
-    color: white;
+    color: orange;
     padding: 10px 0px;
     display: block;
-    float: left;
     text-align: center;
-    width: 150px;
+    width: 250px;
     cursor: pointer;
-    margin-left: 100px;
+    margin-right: 10px;
+    margin-top: 25px;
   }
-  .show{
-    left: 0;
+  .btn-download{
+    float:right;
+    padding: 3px 3px;
+    width: 115px;
+    margin-right: 20px;
+    margin-top: 0px;
+    background: orange ;
+    color: white;
+  }
+  .btn-single{
+    float:right;
+    padding: 3px 3px;
+    width: 33px;
+    margin-right: 20px;
+    margin-top: 0px;
+    background: orange ;
+    color: white;
   }
