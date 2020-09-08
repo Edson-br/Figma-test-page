@@ -145,24 +145,29 @@ body{
   .content{
     padding: 30px;
     font-size: 16px;
+    margin-left: 200px;
     color: black;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
   .content h3{
     font-size: 20px;
     text-transform: uppercase;
-    margin-left: 200px;
-    margin-right: 300px;
+    margin-right: 20%;
     color: orange;
   }
-  .content p{
-    font-size: 18px;
-    text-align: justify;
-    margin-left: 200px;
+  .content video{
+    background-color: lightgray;
+    margin-top: 15px;
+    widows: 320px;
+    width: 75%;
+    height: 600px;
+    border-radius: 5px;
   }
   .right{
     float: right;
+    width: 20%;
   }
+  
   .content span{
     color: orange;
     padding: 10px 0px;
@@ -170,24 +175,64 @@ body{
     text-align: center;
     width: 250px;
     cursor: pointer;
-    margin-right: 10px;
     margin-top: 25px;
+    margin-bottom: 5px;
   }
+  
   .btn-download{
-    float:right;
+    float:inline-end;
     padding: 3px 3px;
     width: 115px;
-    margin-right: 20px;
     margin-top: 0px;
     background: orange ;
     color: white;
   }
   .btn-single{
-    float:right;
+    float:inline-end;
     padding: 3px 3px;
     width: 33px;
-    margin-right: 20px;
     margin-top: 0px;
     background: orange ;
     color: white;
+  }
+  .btn-single-mid{
+    float: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .right ul{
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size:14px;
+    height: 600px;
+  }
+  .right hr{
+    display: block;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px inset rgba(0, 0, 0, 0.6);
+  }
+  .right h4{
+    background: rgba(255, 135, 0, 0.2);
+    font-size: 18px;
+    color: rgba(0,0,0,0.6);
+    padding-block: 5px 5px;
+    padding-left: 15px; 
+    font-style: normal;
+  }
+  .right h5{
+    font-size: 15px;
+    padding-block: 5px 5px;
+    padding-top: 25px;
+    font-weight: initial;
+  }
+  .right dl{
+    font-size:13px;
+    color: gray;
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+  .right b{
+    color: rgba(0,0,0,0.6)
   }
