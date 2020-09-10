@@ -5,10 +5,11 @@
   list-style: none;
   box-sizing: border-box;
 }
-/*Resolucao minima nesse momento 1366x54*/
+/*Resolucao minima nesse momento 1050x54*/
 body{
     margin: 0;
     padding: 0;
+    min-width: 1050px;
   }
   .doc{
     position: fixed;
@@ -32,7 +33,7 @@ body{
 
 /*Comeco da parte do codigo da sidebar*/
   .sidebar{
-    width: 200px;
+    width: 170px;
     height: 100%;
     background: white;
     overflow: hidden;
@@ -40,7 +41,7 @@ body{
     box-shadow: 2px 5px 3px 2px rgb(129, 129, 129);
   }
   .sidebar img{
-    width: 200px;
+    width: 100%;
     display: block;
     margin:  auto;
   }
@@ -81,30 +82,40 @@ body{
     color: black;
     opacity: 0.7;
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
   }
   /*Fim da parte do codigo da sidebar*/
 
-  /*Comeco da "up bar"*/
+  /*Comeco da "up bar"(header)*/
   .upbar{
     background: rgba(255, 135, 0, 0.2);
-    height: 100px;
+    min-height: 100px;
+    height: auto;
     width: 100%;
   }
-  label.titulo{
+  .titulopg{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     float: left;
     margin-top: 10px;
     margin-left: 40px;
     font-size: 17px;
     color: gray;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .userinfo{
+    float: right;
+    width: 320px;
+    height: 100px;
   }
   label.welcome{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     float: right;
     text-align: right;
     margin-top: 25px;
-    margin-right: 20px;
+    margin-right: 5%;
     font-size: 20px;
     color: gray;
   }
@@ -113,7 +124,7 @@ body{
     height: 15px;
     background: rgba(255, 83, 31);
     border-radius: 50%;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: Arial, sans-serif;
     position: absolute;
     text-align: center;
     top: 25px;
@@ -133,7 +144,7 @@ body{
     padding: 10px 10px;
     float: right;
     width: 105px;
-    margin-right: 20px;
+    margin-right: 5%;
     margin-top: 30px;
     border: 1px solid gray;
     background: rgba(255, 135, 0, 0.2), ;
@@ -150,19 +161,65 @@ body{
     padding-left: 3%;
     padding-bottom: 3%;
     font-size: 16px;
-    margin-left: 200px;
-    color: black;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-left: 170px;
+    font-family: Arial, sans-serif;
     overflow: auto;
     max-height: 100%;
   }
 /*Titulo do conteudo*/
-  .content h3{
+  .linhas{
+    width: 100%;
+    height: fit-content;
+  }
+  .tituloct{
+    width: 80%;
+    padding-right: 10%;
     font-size: 20px;
     text-transform: uppercase;
-    margin-right: 20%;
+    color: orange;
+    font-weight: bold;
+  }
+
+/*botoees ao lado do contudo*/
+
+  .buttons{
+    width: 20%;
+    float: right;
+    font-size: 14px;
+  }
+
+  .btn-download{
+    float:inline-end;
+    text-align: center;
+    padding: 3px 3px;
+    width: 50%;
+    margin-top: 0px;
+    background: orange ;
+    color: white;
+    min-width: 92px;
+    max-height: 27px;
+  }
+  .btn-single{
+    float:inline-end;
+    padding: 3px 3px;
+    width: 30px;
+    margin-top: 0px;
+    background: orange ;
+    color: white;
+  }
+  .btn-single-mid{
+    float: center;
+    margin-right: 5%;
+    margin-left: 5%;
+  } 
+  .complment{
+    width: 20%;
+    float: right;
+    margin-top: -15px;
+    text-align: center;
     color: orange;
   }
+  
 /*Video*/ 
   .videospace{
     position: relative;
@@ -220,43 +277,11 @@ body{
     font-size: 20px;
     font-weight:bold;
   }
-
+/*Topico detalhes*/
   .right{
     float: right;
     width: 20%;
-  }
-  
-  .content span{
-    color: orange;
-    padding: 10px 0px;
-    display: block;
-    text-align: center;
-    width: 250px;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-bottom: 5px;
-  }
-  
-  .btn-download{
-    float:inline-end;
-    padding: 3px 3px;
-    width: 115px;
-    margin-top: 0px;
-    background: orange ;
-    color: white;
-  }
-  .btn-single{
-    float:inline-end;
-    padding: 3px 3px;
-    width: 33px;
-    margin-top: 0px;
-    background: orange ;
-    color: white;
-  }
-  .btn-single-mid{
-    float: center;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-left: 90%;
   }
   .right ul{
     overflow: auto;
@@ -350,6 +375,7 @@ body{
   float: left;
   width: 100%;
   height: auto;
+  padding-bottom: 30px;
   margin-top: 0px;
   margin-bottom: 30px;
   border: 1px solid gray;
@@ -364,12 +390,14 @@ body{
   padding-left: 15px; 
   font-style: normal;
 }
+/*Parte referente a criacao do topico*/
 .topico{
   position: relative;
   padding-block: 0.5%;
   float: center;
   width: 100%;
   text-align: center;
+  display: block;
 }
 .topico b{
   color: orange;
@@ -383,6 +411,7 @@ body{
   color: rgba(0,0,0,0.7);
   font-size:16px;
   font-style: normal;
+  text-align: center;
 }
 .topico img{
   margin-left: auto;
@@ -409,15 +438,86 @@ body{
   color: white;
   font-size: 16px;
 }
+/*Fomulario ao aprtar btn-topico*/
+
+.formulario{
+  position: relative;
+  padding-block: 0.5%;
+  float: center;
+  width: 100%;
+  text-align: left;
+  display: block;
+}
+.form{
+  padding-block: 0.5%;
+  float: center;
+  width: 90%;
+}
+.formulario label{
+  color: orange;
+  font-size:16px;
+  font-style: normal;
+  padding-top: 20px;
+  margin-left: 5%;
+  margin-right: 2.5%;
+}
+input[type=assunto], select {
+  width: 90%;
+  margin-left: 5%;
+  margin-top:0.5%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+textarea {
+  font-size: .8rem;
+  letter-spacing: 1px;
+  width: 90%;
+  padding: 10px;
+  margin-left: 5%;
+  line-height: 1.5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+.btn-enviar{
+  float:inline-end;
+  text-align: center;
+  padding: 3px 3px;
+  width: 20%;
+  margin-right: 5%;
+  border-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #ccc;
+  background: orange ;
+  color: white;
+  min-width: 92px;
+  max-height: 27px;
+}
+.formatacaotexto{
+  margin-left: 5%;
+  height: 27px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 5px;
+  background-color: lightgray;
+  font-size: 16px;
+}
+.formatacaotexto b{
+  padding-left:2%;
+  padding-right: 2%;
+}
 
 /*bloco de perguntas*/
 
 .pergunta{
+  display: block;
   padding-block: 0.5%;
   float: center;
   width: 90%;
   margin-top: 2%;
-  margin-bottom: 2%;
   margin-left: 5%;
   margin-right: 5%;
   padding-top: 1.5%;
@@ -451,6 +551,17 @@ body{
   margin-right: 2.5%;
   margin-bottom: 10px;
 }
+.pergunta button{
+  width: 100%;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  text-align: left;
+}
 .btnline{
   margin-left: 2.5%;
   margin-right: 2.5%;
@@ -473,6 +584,52 @@ body{
   color: orange;
 }
 
+/*Responsta*/
+
+.resposta{
+  display: block;
+  margin-left: 5%;
+  margin-top: 0;
+  padding-block: 0.5%;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 5px 10px 18px #888888;
+  height: fit-content;
+}
+.resposta p{
+  color: rgba(0,0,0,0.7);
+  font-size:15px;
+  font-style: normal;
+  margin-top: 1%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 10px;
+}
+.resposta i{
+  color: rgb(209, 103, 4);
+  float: right;
+  padding-top: 5px;
+  margin-top: 1%;
+  margin-right: 2.5%;
+}
+.resposta cite{
+  color: rgb(209, 103, 4);
+  float: right;
+  margin-top: 1%;
+  margin-right: 1%;
+  font-weight: bold;
+}
+
+.resposta-dark{
+  background-color: lightgray;
+}
+.resposta-light{
+  background-color: white;
+}
+
+/*Rodape*/
 .rodape{
   float: left;
   width: 100%;
@@ -530,7 +687,7 @@ body{
   font-style: normal;
   font-size: 14px;
   color:rgba(0,0,0,0.7);
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, sans-serif;
 }
 .objetivo p{
   padding-top: 2%;
