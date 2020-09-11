@@ -10,7 +10,7 @@
 
 <body>
 <div class="doc">
-    <div class="sidebar">
+    <div class="sidebar"> <!--Side bar-->
         <img src="logo.png" alt="">
 
         <ul>
@@ -29,13 +29,13 @@
         </ul>
     </div>
 
-    <div class="upbar">
-        <div class="titulopg">
+    <div class="upbar"> <!--Header-->
+        <div class="titulopg"><!--Titulo da pagina-->
             <h5>Anais do simposito latinoamericano</h5>
             <p><h2>Anais do 13 simposito latino americano </h2></p>
             <p><h4>ISSN: 1234-5678</h4></p>
         </div>
-        <div class="userinfo">
+        <div class="userinfo"><!--Informacoes do usuario(email, foto, notificaocoes)-->
             <a href="#"><img src="vovoFinal.gif" alt=""></a>
             <label class="notficacoes">2</label>
             <label class="welcome">
@@ -46,20 +46,20 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="content"><!--Conteeudo da pagina-->
         <div class="linha">
-            <div class="buttons">
+            <div class="buttons"><!--Botoes de donwload, favorito e Doi(ps. nao achei o icone do doi no fontsawsome)-->
                 <a href="#" class="btn btn-single"><i class="far fa-dot-circle"></i></a>
                 <a href="#" class="btn btn-single btn-single-mid"><i class="fas fa-star"></i>
                 <a href="#" class="btn btn-download"><i class="fas fa-download"></i>Donwload</a>
             </div>
-            <div class="tituloct">
+            <div class="tituloct"><!--Titulo do trabalho/artigo-->>
                 Analise sensorial de preparacoes funcionais desenvolvidas para escolares entre 09 e 15 anos, do municipio de Campinas
             </div>
             <div class="complment">Como citar esse trabalho?</div>
         </div>
         <div class="linha">
-            <div class="right">
+            <div class="right"><!--A seção detalhes foi feita usando duas listas(li - para o titulo da seção e dl - para o conteudo)-->
                 <ul>
                     <li><h4>Detalhes</h4></li>
                     <hr>
@@ -81,12 +81,12 @@
                     </dl>
                 </ul>
             </div>
-            <div class="videospace">
-                <video controls loop>
+            <div class="videospace"><!--Espaco que o video ira ocupar-->
+                <video controls loop><!--Video-->
                     <source src="movie.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
-                <div class="overlay">
+                <div class="overlay"><!--Overlay do video(imagem, titulo, autor e intituicao)-->
                     <p>Analise sensorial de preparacoes funcionais desenvolvidas para escolares entre 09 e 15 anos, do municipio de Campinas</p>
                     <div class="bottomoverlay">
                     <img src="vovoFinal.gif" alt="">
@@ -96,13 +96,13 @@
                 </div>
             </div>
         </div>
-        <a href="javascript:void(0)" onclick="showmore()"><div class="resumo">
-            <dl>
+        <a href="javascript:void(0)" onclick="showmore()"><div class="resumo"><!--Resumo do artigo, como um <a>href para a funcao de ver mais-->
+            <dl><!--Novamente utilizando a tag dl pra fazer o titulo e conteudo a seção-->
                 <dt><h4>Resumo</h4></dt>
-                <hr>
+                <hr><!--seção peermanente-->
                 <dd>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                     <span id="dots">Ler mais</span>
-                    <div id="more"> 
+                    <div id="more"> <!--seção movel-->
                         <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nenim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                         <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
                     </div>
@@ -110,10 +110,10 @@
             </dl>
         </div></a>
 
-        <div class="discucao">
+        <div class="discucao"><!--Espaco para discucao-->
             <h4>Discucao</h4>
             <hr>
-            <div class="topico" id="topico">
+            <div class="topico" id="topico"><!--Parte que incentiva o leitor a escrever uma pergunta-->
                 <b>Compatilhe suas ideias ou duvidas com os autores!</b>
                 <br>
                 <img src="topic.png" alt="">
@@ -124,21 +124,21 @@
                 <hr>
                 <a href="javascript:void(0)" onclick="showform()" class="btn btn-topico"><i class="fas fa-plus"></i>Criar topico</a>
             </div>
-            <div class="formulario" id="formulario">
+            <div class="formulario" id="formulario"><!--Formulario para envio da pergunta-->
                 <br>
                 <div class="motivador">
                    Tem alguma duvida ou sugestao? Compatilhe su fedback com os autores!
                 </div>
                 <form>
-                    <label for="fname">Assunto</label><br>
+                    <label for="fname">Assunto</label><br><!--Assunto da pergunta-->
                     <input type="assunto" id="assunt" name="assunt" placeholder="Defina um topico sucinto pa notificar os autores"><br>
-                    <label for="lname">Conteudo</label><br>
+                    <label for="lname">Conteudo</label><br><!--A pergunta-->
                     <textarea id="conteudo" name="conteudo" rows="5"></textarea>
                 </form>
                 <a href="#" class="btn  btn-enviar">Enviar</a>
                 <div class="formatacaotexto"><b>B</b>  <i>i</i></div>
             </div>
-            <div class="pergunta">
+            <div class="pergunta"><!--Perguntas-->
                 <b>Asunto da pergunta aparece aqui</b> 
                 <br>
                 <cite>Carlos Almeida de Ramos</cite>
@@ -162,7 +162,7 @@
                 </div>
             </button>
             </div>
-            <div class="respostas" id="respostas">
+            <div class="respostas" id="respostas"><!--Respostas da pegunta-->
                 <div class="resposta resposta-dark" name="resposta">
                     <i class="fas fa-check-double"></i>
                     <cite>Autor</cite>
@@ -187,7 +187,7 @@
                 </div>
             </div>
         </div>
-        <div class="rodape">
+        <div class="rodape"><!--Rodape da pagina com inforamcoes dessa grande empresa!!-->
             <div class="gaola">
                 <img src="gaolalogo.png" alt="">
                 <hr>
@@ -204,7 +204,7 @@
 
 </body>
 <script>
-    function showmore(){
+    function showmore(){//Funcao utilizada no resumo, mostrar mais
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("more");
 
@@ -216,13 +216,13 @@
             moreText.style.display = "none";
         }
     }
-    function showform(){
+    function showform(){//Funcao utilizada para mostrar o formulario
         var form = document.getElementById("formulario");
         var topic = document.getElementById("topico");
         topic.style.display= "none";
         form.style.display="block";
     }
-    function showcomments(){
+    function showcomments(){//Funcao utilizada para mostrar as respostas
         var answer = document.getElementById("respostas");
         if(answer.style.display==="block"){
             answer.style.display="none";
