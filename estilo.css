@@ -332,8 +332,8 @@ body{
     font-size:14px;
   }
 
-  .more {
-    display: inline;
+  #more {
+    display: none;
   }
 
   .resumo dt{
@@ -363,7 +363,7 @@ body{
     margin-bottom: 0px;
     float: inline-end;
     color: orange;
-    display: none;
+    display: inline;
     text-align: left;
     width: auto;
     cursor: pointer;
@@ -446,7 +446,7 @@ body{
   float: center;
   width: 100%;
   text-align: left;
-  display: block;
+  display: none;
 }
 .form{
   padding-block: 0.5%;
@@ -498,7 +498,7 @@ textarea {
 }
 .formatacaotexto{
   margin-left: 5%;
-  height: 27px;
+  height: 25px;
   width: 70%;
   border: 1px solid #ccc;
   border-bottom-left-radius: 5px;
@@ -628,7 +628,9 @@ textarea {
 .resposta-light{
   background-color: white;
 }
-
+.respostas{
+  display: none;
+}
 /*Rodape*/
 .rodape{
   float: left;
