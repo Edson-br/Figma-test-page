@@ -3,14 +3,20 @@
     
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <title>Slaca 2019</title>
   </head>
 
 <body>
 <div class="doc">
-    <div class="sidebar"> <!--Side bar-->
+    <div class="sidebar" id="sidebar"> <!--Side bar-->
+        <div class="nome_evento">
+            Slaca 2019
+        </div>
         <img src="logo.png" alt="">
 
         <ul>
@@ -30,35 +36,58 @@
     </div>
 
     <div class="upbar"> <!--Header-->
-        <div class="titulopg"><!--Titulo da pagina-->
-            <h5>Anais do simposito latinoamericano</h5>
-            <p><h2>Anais do 13 simposito latino americano </h2></p>
-            <p><h4>ISSN: 1234-5678</h4></p>
-        </div>
-        <div class="userinfo"><!--Informacoes do usuario(email, foto, notificaocoes)-->
+        <a href="javascript:void(0)" onclick="hidetitle()"><div  class="menu">
+            <i class="fas fa-bars"></i>
+        </div></a>
+        <div class="userinfo" id="userinfo"><!--Informacoes do usuario(email, foto, notificaocoes)-->
             <a href="#"><img src="vovoFinal.gif" alt=""></a>
             <label class="notficacoes">2</label>
             <label class="welcome">
                 Bem vindo!
-                <p><h5>test@test</h5></p>
+                <p>test@test</p>
             </label>
             <a href="#" class="btn btn-upbar"><i class="fas fa-globe"></i>Pt, Br<i class="fas fa-caret-down"></i></a> 
+        </div>
+        <div class="titulopg" id="title"><!--Titulo da pagina-->
+            <h1>Anais do simposito latinoamericano</h1>
+            <p><h2>Anais do 13 simposito latino americano </h2></p>
+            <p><h1>ISSN: 1234-5678</h1></p>
         </div>
     </div>
 
     <div class="content"><!--Conteeudo da pagina-->
-        <div class="linha">
+        
+        <div class="linhas">
+            <div class="tituloct tituloct-cima">
+                Analise sensorial de preparacoes funcionais desenvolvidas para escolares entre 09 e 15 anos, do municipio de Campinas
+            </div>
             <div class="buttons"><!--Botoes de donwload, favorito e Doi(ps. nao achei o icone do doi no fontsawsome)-->
                 <a href="#" class="btn btn-single"><i class="far fa-dot-circle"></i></a>
                 <a href="#" class="btn btn-single btn-single-mid"><i class="fas fa-star"></i>
-                <a href="#" class="btn btn-download"><i class="fas fa-download"></i>Donwload</a>
+                <a href="#" class="btn btn-download"><i class="fas fa-download"></i>Download</a>
+                <div class="complment">Como citar esse trabalho?</div>
             </div>
-            <div class="tituloct"><!--Titulo do trabalho/artigo-->>
+            <div class="tituloct" id="title"><!--Titulo do trabalho/artigo-->
                 Analise sensorial de preparacoes funcionais desenvolvidas para escolares entre 09 e 15 anos, do municipio de Campinas
             </div>
-            <div class="complment">Como citar esse trabalho?</div>
         </div>
-        <div class="linha">
+
+        <div class="linhas">
+            <div class="videospace"><!--Espaco que o video ira ocupar-->
+                <video controls loop><!--Video-->
+                    <source src="movie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                <div class="overlay"><!--Overlay do video(imagem, titulo, autor e intituicao)-->
+                    <p>Analise sensorial de preparacoes funcionais desenvolvidas para escolares entre 09 e 15 anos, do municipio de Campinas</p>
+                    <div class="bottomoverlay">
+                    <img src="vovoFinal.gif" alt="">
+                    <i>Beatriz Cristiane Melo</i>
+                    <b>FCA / Universidade Estadual de Campinas</b>
+                    </div>
+                </div>
+            </div>
+
             <div class="right"><!--A seção detalhes foi feita usando duas listas(li - para o titulo da seção e dl - para o conteudo)-->
                 <ul>
                     <li><h4>Detalhes</h4></li>
@@ -80,20 +109,6 @@
                         <dt>universidade federal do rio de janeiro</dt>
                     </dl>
                 </ul>
-            </div>
-            <div class="videospace"><!--Espaco que o video ira ocupar-->
-                <video controls loop><!--Video-->
-                    <source src="movie.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
-                <div class="overlay"><!--Overlay do video(imagem, titulo, autor e intituicao)-->
-                    <p>Analise sensorial de preparacoes funcionais desenvolvidas para escolares entre 09 e 15 anos, do municipio de Campinas</p>
-                    <div class="bottomoverlay">
-                    <img src="vovoFinal.gif" alt="">
-                    <i>Beatriz Cristiane Melo</i>
-                    <b>FCA / Universidade Estadual de Campinas</b>
-                    </div>
-                </div>
             </div>
         </div>
         <a href="javascript:void(0)" onclick="showmore()"><div class="resumo"><!--Resumo do artigo, como um <a>href para a funcao de ver mais-->
@@ -124,6 +139,7 @@
                 <hr>
                 <a href="javascript:void(0)" onclick="showform()" class="btn btn-topico"><i class="fas fa-plus"></i>Criar topico</a>
             </div>
+
             <div class="formulario" id="formulario"><!--Formulario para envio da pergunta-->
                 <br>
                 <div class="motivador">
@@ -135,10 +151,25 @@
                     <label for="lname">Conteudo</label><br><!--A pergunta-->
                     <textarea id="conteudo" name="conteudo" rows="5"></textarea>
                 </form>
-                <a href="#" class="btn  btn-enviar">Enviar</a>
+                <a href="javascript:void(0)" onclick="createPergunta()" class="btn  btn-enviar">Enviar</a>
                 <div class="formatacaotexto"><b>B</b>  <i>i</i></div>
             </div>
-            <div class="pergunta"><!--Perguntas-->
+
+            <div class="confirmacaoenvio" id="confirmacaoenvio" style="display: none;"><!--Mensagem de confirmacao de envio da pergunta-->
+                <b>Seu tópico foi enviado com sucesso! :D</b>
+                <div class="motivador">
+                    Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!
+                </div>
+                <i><a href="#">Descubra outros trabalhos!</a></i>
+                <hr>
+                <a href="javascript:void(0)" onclick="showform()" class="btn btn-confirmacaoenvio">Criar novo topico</a>
+            </div>
+
+            <div class="perguntaspace" id="perguntaspace"><!--Espaco para as pergunta do usuario-->
+                
+            </div>
+
+            <div class="pergunta"><!--Perguntas previas-->
                 <b>Asunto da pergunta aparece aqui</b> 
                 <br>
                 <cite>Carlos Almeida de Ramos</cite>
@@ -150,7 +181,7 @@
                 </div>
             </div>
             <div class="pergunta">
-            <button onclick="showcomments()">
+            <button onclick="showcomments()"><!--Pergunta com respostas-->
                 <b>Asunto da pergunta aparece aqui</b> 
                 <br>
                 <cite>Carlos Almeida de Ramos</cite>
@@ -162,6 +193,7 @@
                 </div>
             </button>
             </div>
+
             <div class="respostas" id="respostas"><!--Respostas da pegunta-->
                 <div class="resposta resposta-dark" name="resposta">
                     <i class="fas fa-check-double"></i>
@@ -187,6 +219,7 @@
                 </div>
             </div>
         </div>
+
         <div class="rodape"><!--Rodape da pagina com inforamcoes dessa grande empresa!!-->
             <div class="gaola">
                 <img src="gaolalogo.png" alt="">
@@ -199,10 +232,11 @@
                <p>Os trabalhos publicados aqui tem maior alcance e ficam disponiveis para toda a comunidade cientifica, mantendo acesso o debate cientifico fomentado pelos encontros e aumentando o impacto do evento</p>
             </div>
         </div>
+
     </div>
 </div>
-
 </body>
+
 <script>
     function showmore(){//Funcao utilizada no resumo, mostrar mais
         var dots = document.getElementById("dots");
@@ -217,8 +251,10 @@
         }
     }
     function showform(){//Funcao utilizada para mostrar o formulario
+        var comfirmacao = document.getElementById("confirmacaoenvio")
         var form = document.getElementById("formulario");
         var topic = document.getElementById("topico");
+        comfirmacao.style.display="none"
         topic.style.display= "none";
         form.style.display="block";
     }
@@ -228,6 +264,39 @@
             answer.style.display="none";
         }else{
             answer.style.display="block";
+        }
+    }
+    function createPergunta(){//Fucao utilizada para criar uma nova pergunta
+        var div = document.createElement('div');
+        div.className = "pergunta";
+        div.setAttribute("id", "perguntaUsuario");//Esse innerHtml eh um crt+c do conteudo da div pergunta (linha 172)
+        div.innerHTML = '<b>Asunto da pergunta aparece aqui</b><br><cite>Carlos Almeida de Ramos</cite><p>Aqui esta escrita a questao com todo seu conteudo pertinente para discucao e para melhorar o cenario cientifico do brasil.</p><div class="btnline"><a href="#" class="btn btn-more"><i class="fas fa-ellipsis-v"></i></a><a href="#" class="btn btn-like"><i class="fas fa-heart"></i></a><cite>1 like</cite> <cite>1 resposta</cite>';
+        document.getElementById('perguntaspace').appendChild(div);
+
+        var divBlock = document.createElement('div');
+        divBlock.className = "overlayComfirmacao";
+        divBlock.innerHTML = '<i class="fas fa-check-double"></i><div class="motivador">Aguardando feedback dos autores</div><i><a href="#">Editar topico</a></i>';
+
+        div.appendChild(divBlock); 
+
+        var form = document.getElementById("formulario");
+        var confirmacao = document.getElementById("confirmacaoenvio");
+        form.style.display="none";
+        confirmacao.style.display= "block";
+    }
+    function hidetitle(){//Fucao utilizada para esconder o titulo da pagina ou a sidebar e as informacoes do usuario, quando apertado o botao menu
+        var userinfo = document.getElementById("userinfo");
+        var sidebar = document.getElementById("sidebar");
+        var title = document.getElementById("title");
+
+        if (title.style.display === "inline") {
+            userinfo.style.display = "inline";
+            sidebar.style.display = "inline";
+            title.style.display = "none";
+        } else {
+            userinfo.style.display = "none";
+            sidebar.style.display = "none";
+            title.style.display = "inline";
         }
     }
 </script>
